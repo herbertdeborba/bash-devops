@@ -1,0 +1,14 @@
+# Cmnd alias specification
+Cmnd_Alias CMD_SYSADM_NOPWD=/opt/devops/daemon-clean.sh, /opt/devops/daemon-start.sh, /opt/devops/daemon-stop.sh, /opt/devops/daemon-restart.sh, /opt/devops/network-block.sh, /opt/devops/util-log-monitor.sh
+Cmnd_Alias CMD_DEVADM_NOPWD=/opt/devops/common-permissions.sh, /opt/devops/custom/daemon-logs-all.sh, /opt/devops/daemon-status.sh
+
+# User privilege specification
+root    ALL=(ALL:ALL) NOPASSWD:ALL
+
+# Allow members of group sudo to execute any command
+%sudo   ALL=(ALL) ALL
+
+# Comandos para todos os usuarios sem senha
+%sysadm ALL=(ALL) NOPASSWD:CMD_SYSADM_NOPWD
+%sysadm ALL=(ALL) NOPASSWD:CMD_DEVADM_NOPWD
+%devadm ALL=(ALL) NOPASSWD:CMD_DEVADM_NOPWD

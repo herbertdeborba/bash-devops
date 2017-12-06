@@ -1,0 +1,10 @@
+#Defaults 	env_keep += "JAVA_HOME"
+#Defaults 	env_keep += "JBOSS_HOME"
+
+# Cmnd alias specification
+#Cmnd_Alias CMD_SYSADM_POSTGRES_NOPWD=ALL
+#Cmnd_Alias CMD_SYSADM_SERVICES_NOPWD=/etc/init.d/postgresql
+
+# Comandos para todos os usuarios sem senha
+#%devadm ALL=(postgres) NOPASSWD:CMD_SYSADM_POSTGRES_NOPWD
+#%devadm ALL=(ALL) NOPASSWD:CMD_SYSADM_SERVICES_NOPWD
