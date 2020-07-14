@@ -1,5 +1,5 @@
 # bash-devops
-Bash scripts a DevOps approach on administering application servers
+Bash scripts to provide a DevOps approach on administering application servers
 
 ## custom
 
